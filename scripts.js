@@ -94,6 +94,7 @@ function clickToChange(triggerClass, targetElement, targetClass, Class) {
 clickToChange('.project-1', '#portfolio-menu', '.vert-menu', 'grid-container')
 clickToChange('.P1_SN1_inactive', '#p1s1','.P1_SN1_active','P1_SN1_inactive')
 clickToChange('.P1_SN2_inactive', '#p1s2','.P1_SN2_active','P1_SN2_inactive')
+clickToChange('.p1s3inactive', '#p1s3','.p1s3active','p1s3inactive')
 clickToChange('.project-1', '#project1', '.project-active-1', 'project-inactive-1')
 
 
