@@ -57,7 +57,12 @@ section{
   position: relative;
   width: 100vw;
   height: auto;
+  /* max-height: 100vw; */
   padding-bottom: 10vw;
+}
+
+#portfolio-grid{
+  margin-bottom: -100vw;
 }
 
 
@@ -77,6 +82,8 @@ section{
   height: auto;
   box-shadow: 0px 10px 10px var(--dropshadow);
  }
+
+
 
 ::-webkit-scrollbar{
   width: 0;
@@ -291,13 +298,19 @@ a:hover {
   position: fixed;
   z-index: -100;
   top: 0;
-  left: 0;
+  left: 50%;
   bottom: 0;
   right: 0;
   min-width: 200%;
   height: 200vh;
   width: auto;
   object-fit: fill;
+  transform: translateX(-50%)
+}
+
+#videobg .reel {
+  max-width: none;
+  width: auto;
 }
 
 .darkmode .videobg{
