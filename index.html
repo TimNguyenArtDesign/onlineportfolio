@@ -21,16 +21,22 @@
 </head>
 
 <body>
+
+      <!-- Video Background -->
+    <div id="videobg">
+         <video autoplay muted loop class="videobg">
+           <source src="assets/VIDEO BG/TRON_BG.mp4" type="video/mp4">
+         </video>
+       </div>
+
   <!-- Entrance -->
     <section>
-      <div id="reel" class="entrancecontent">
-         <video autoplay muted loop class="reel">
-           <source src="assets/reel.mp4" type="video/mp4">
-         </video>
+      <div id="entrancecontent" class="entrancecontent">
+         <iframe class="reel" frameborder="0" allowautoplay allowloop src="https://youtube.com/embed/QFvUQoPXWoI?autoplay=1&mute=1&loop=1&controls=0?vq=hd1080">
+         </iframe>
 
           <div class="entranceinfo">
-            Tung Nguyen
-            <br>
+            <h2>Tung Nguyen</h2>
             <a href=tel:2896733079>289 673 3079</a>
             <br>
             <a href=mailto:tungnguyen.artdesign@gmail.com target="_blank"> tungnguyen.artdesign@gmail.com </a>
@@ -40,12 +46,6 @@
 
   <!-- Now is the main body -->
 
-      <!-- Video Background -->
-    <div id="videobg" class="videobg">
-         <video autoplay muted loop class="reel">
-           <source src="assets/VIDEO BG/TRON_BG.mp4" type="video/mp4">
-         </video>
-       </div>
 
 
 
@@ -68,11 +68,7 @@
 
         <img class="BusinessFront2" src="assets/Dark Mode Business Card/BUSINESS CARD FRONT.png">
 
-        <button id="businessCardRotate" class="rotateBtn" type="button"> <img  src="assets/Buttons/rotateBtn.png"> </button>
-
-
-
-
+        <!-- BIO TEXT PIECE ================= -->
         <div class="BioText">
             <div class="paper">
               <div class="pattern">
@@ -90,9 +86,25 @@
                  </p>
               </div>
             </div>
-          </div>
+        </div>
 
-          <div class="SocialMediaNotes">
+
+
+
+        <!-- SPECIALTY PIECE ===================== -->
+
+        <div class="specialtypiece">     
+          <p>I love to work on:</p>
+          <h3>* MOTION GRAPHICS *</h3>
+          <br>
+          <h3>* BRAND IDENTITY *</h3>
+          <br>
+          <h3>* ILLUSTRATION *</h3>
+
+        </div>
+
+        <!-- SOCIAL MEDIA PIECE ================= -->
+        <div class="SocialMediaNotes">
 
               <a  class="soc" href="https://www.instagram.com/timnguyen_art_design/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
               <a class="soc" href="https://twitter.com/TimNguyenDesign" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -101,7 +113,11 @@
               <a class="soc" href=mailto:tungnguyen.artdesign@gmail.com target="_blank"><i class="fa-solid fa-envelope"></i></a>
               <a class="soc"href=tel:2896733079><i class="fa-solid fa-phone"></i></a>
         </div>
+
       </div>
+      
+      <button id="businessCardRotate" class="rotateBtn" type="button"> <img  src="assets/Buttons/rotateBtn.png"> </button>
+
     </section>
 
 
@@ -123,7 +139,7 @@
 
       <!-- Portfolio Grid -->
         <div id="portfolio-menu" class="grid-container">
-          <div class="grid-item project-1">
+          <div id="BusinessCardPolaroid" class="grid-item">
             <div class="polaroidborder">
                 <div class="polaroid">
 
@@ -138,7 +154,7 @@
               </div>
           </div>
 
-          <div class="grid-item project-2">
+          <div id="NNPPolaroid" class="grid-item">
               <div class="polaroidborder">
 
                 <div class="polaroid">
@@ -156,7 +172,7 @@
           </div>
 
 
-          <div class="grid-item project-3">
+          <div id="VindicatedPolaroid" class="grid-item">
              <div class="polaroidborder">
                 <div class="polaroid">
                   <img src="assets/Vindicated LLC - 2022 - Logo Design/Square.jpg">
@@ -171,7 +187,7 @@
               </div>
           </div>
 
-          <div class="grid-item project-4">
+          <div id="ValentinePolaroid" class="grid-item project-4">
             <div class="polaroidborder"> 
                 <div class="polaroid">
                   <img src="assets/Horticulture LLC - 2022 - Valentine Merch/square.jpg">
@@ -201,25 +217,27 @@
 
 
 
-      <!-- Project Active 1 - Business Card -->
-      <div id='project1' class="project-inactive-1">
+      <!-- Project Active - Business Card -->
+      <div id='BusinessCardShowcase' class="project-inactive">
 
         <div class="project-active-images">
 
-        <div class="project-header">
+          <div class="project-header">
           
           <h2>Personal Business Card - 2023</h2>
 
-        </div>
+          </div>
 
 
          <img class="project-image" src="assets/BusinessCard/TungNguyen_BusinessCard.jpg">
 
-         <img class="project-image" src="assets/BusinessCard/NoteBook_Mockup_Logo.jpg">
+         <img class="project-image" src="assets/BusinessCard/MockupCombo.png">
 
-         <img class="project-image" src="assets/BusinessCard/PhoneCase_MockUp.jpg">
+         <video controls autoplay muted loop class="project-video">
+          <source src="assets/BusinessCard/CardMotion.mp4" type="video/mp4">
+          </video>
 
-          </div>
+        </div>
 
         <div class="project-active-notes">
 
@@ -269,11 +287,11 @@
         <div id="p1s3" class="p1s3inactive">
 
 
-        <h3>Design Solution:</h3>
+          <h3>Design Solution:</h3>
             <br>
             <h3><em><mark>Ambrigram design</mark></em></h3>
             <br>
-          <p>
+           <p>
             Double-direction readablity => Eliminate confusions.
             <br>
             <br>
@@ -287,9 +305,9 @@
 
       </div>
 
-      <!-- Project Active 2 - NNP -->
+      <!-- Project Active - NNP -->
 
-      <div id='project2' class="project-inactive-2">
+      <div id='NNPShowcase' class="project-inactive">
 
         <div class="project-active-images">
 
@@ -303,7 +321,7 @@
 
           <img class="project-image" src="assets/NNP/Logo.jpg">
 
-          <img class="project-image" src="assets/NNP/NNPmockup2.png">
+          <img class="project-image" src="assets/NNP/Sticker_Pins_Mockup.png">
 
           <img class="project-image" src="assets/NNP/NNP_Handout_Mockup.jpg">
 
@@ -424,8 +442,8 @@
 
       </div> 
 
-      <!-- Project Active 3 - VINDICATED -->
-      <div id='project3' class="project-inactive-3">
+      <!-- Project Active - VINDICATED -->
+      <div id='VindicatedShowcase' class="project-inactive">
         
         <div class="project-active-images">
 
@@ -443,7 +461,7 @@
 
           <img class="project-image" src="assets/Vindicated LLC - 2022 - Logo Design/Photographs/Logos_On_Shirts.jpg">
 
-          <img class="project-image" src="assets/Vindicated LLC - 2022 - Logo Design/PhonescreenMockUp_Vindicated.jpg">
+          <img class="project-image" src="assets/Vindicated LLC - 2022 - Logo Design/MockupCombo.png">
 
           <img class="project-image" src="assets/Vindicated LLC - 2022 - Logo Design/Laptop_Vindicated_Mockup.jpg">
 
@@ -523,31 +541,30 @@
             <h3>Design Solution</h3>
             <br>
             <p>
-            Geometric Sans-serif
-            <br>
-            Borders
-            <br>
-            Vertical Stripes
-            <br>
-            => Structure, Order & Authority.
-            <br>
-            <br>
-            Slight distortion effect.
-            <br>
-            Backward E.
-            <br>
-            Tilted upward angle.
-            <br>
-            => Energy, Dynamism, Growth.
-            <br>
-            <br>
-            Closed Shape
-            <br>
-            => Shield/Bar > Protection.
-            <br>
-            => Skateboard > Ollie.
-
-          </p>
+              Geometric Sans-serif
+              <br>
+              Borders
+              <br>
+              Vertical Stripes
+              <br>
+              => Structure, Order & Authority.
+              <br>
+              <br>
+              Slight distortion effect.
+              <br>
+              Backward E.
+              <br>
+              Tilted upward angle.
+              <br>
+              => Energy, Dynamism, Growth.
+              <br>
+              <br>
+              Closed Shape
+              <br>
+              => Shield/Bar > Protection.
+              <br>
+              => Skateboard > Ollie.
+            </p>
 
           </div>
 
@@ -555,8 +572,8 @@
 
       </div>
 
-      <!-- Project Active 4 - Valentine-->
-      <div id="project4" class="project-inactive-4" >
+      <!-- Project Active - Valentine-->
+      <div id="ValentineShowcase" class="project-inactive" >
         <div class="project-active-images">
           <div class="project-header">
             <h2>Horticulture LLC - 2022
@@ -565,19 +582,64 @@
 
           </div>
 
-          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/TungNguyen_ValentineMockup2_Front.jpg">
+          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/TungNguyen_ValentineMockup2.png">
 
-          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/TungNguyen_ValentineMockup1_Design1.jpg">
+          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/MockupCombo1.png">
 
-          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/TungNguyen_ValentineMockup3.jpg">
+          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/MockupCombo2.png">
 
-          <img class="project-image" src="assets/Horticulture LLC - 2022 - Valentine Merch/PhoneCase_MockUp _Valentine.jpg">
 
 
         </div>
 
         <div class="project-active-notes">
           
+          <div id="vlts1" class="vlts1-inactive">
+            <h3>Who Are They?</h3>
+            <br>
+            <p>
+              Stationed in Hawaii.
+              <br>
+              <br>
+              Idependent local fashion brand.
+              <br>
+              <br>
+              Cater to young adults.
+            </p>
+
+          </div>
+
+          <div class="offscreen"></div>
+          <div class="offscreen"></div>
+
+          <div id="vlts2" class="vlts2-inactive">
+            <h3>Client's Demand:</h3>
+            <br>
+            <p>
+              Couple Design.
+              <br>
+              <br>
+              Cutesy theme.
+              <br>
+              <br>
+              Young & relaxing.
+            </p>
+          </div>
+
+          <div id="vlts3" class="vlts3-inactive">
+            <h3>Design Solution:</h3>
+            <br>
+            <p>
+              Sun & Moon, Stars & Clouds, Boy & Girl symmetry.
+              <br>
+              <br>
+              Pastel palette.
+              <br>
+              <br>
+              Window frame scene => thoughtful, dreamy landscape.
+              Square shape => steadiness & reliability.
+            </p>
+          </div>
 
 
         </div>

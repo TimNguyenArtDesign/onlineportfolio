@@ -62,24 +62,29 @@ section{
 }
 
 #portfolio-grid{
-  margin-bottom: -100vw;
 }
 
 
- .entranceinfo {
+.entranceinfo {
   position: relative;
+  /* background-color: var(--dark); */
+ backdrop-filter: blur(10px);
+  /* box-shadow: 0px 0px 10px var(--dark); */
   z-index: 11;
   color: var(--light);
   font-size: 1.5vw;
   transform: translate(10vw, -13vw);
   display: inline-block;
+  padding: 0.5em;
+
  }
 
- .reel {
+
+.reel {
   position: relative;
   z-index: 10;
   width: 100vw;
-  height: auto;
+  height: 98vh;
   box-shadow: 0px 10px 10px var(--dropshadow);
  }
 
@@ -117,7 +122,8 @@ section{
 .BioText {
   rotate: 2deg;
   display: inline-block;
-  transform: translate(11vw, -8vw);
+  transform: translate(23vw, -8vw);
+  transition: 0.5s;
 }
 
 
@@ -146,24 +152,35 @@ section{
   letter-spacing: 1vw;
   border-radius: 2px;
   box-shadow: 0px 0px 5px var(--dropshadow);
-  background-image: repeating-linear-gradient(transparent 0px, transparent 20px, #bd7676 22px);
+  background-image: repeating-linear-gradient(transparent 0px, transparent 20px, var(--darkred) 22px);
   rotate: -3deg;
   position: relative;
   z-index: 1;
-  transform: translate(-10vw, -2.5vw);
+  transform: translate(70vw, -4.5vw);
   transition: 0.5s;
 }
 
 
+.specialtypiece {
+  background-color: var(--stickynoteyellow);
+  background-image: repeating-linear-gradient(transparent 0px, transparent 20px, var(--darkyellow) 22px);
+  display: inline-block;
+  padding: 0.5vw 1.5vw 1vw 2vw;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0px 0px 5px var(--dropshadow);
+  rotate: 3deg;
+  transition: 0.5s;
+  transform: translate(-23vw,11vw);
+}
 
 
 
-
-.portfoliopaper {rotate: -2deg;display: inline-block;transform: translate(23vw);margin-bottom: 3vw;position: sticky;top: 2vw;z-index: 1;}
+.portfoliopaper {rotate: -2deg;display: inline-block;transform: translate(23vw);margin-bottom: 3vw;position: sticky;top: 2vw;z-index: 1;cursor: pointer;}
 
 .smolpattern{
     background-image:repeating-linear-gradient(transparent 0px, transparent 29px, var(--darkbloo) 30px);
-    padding: 0em 4em 0em 4em;
+    padding: 0em 4vw 0em 4vw;
     background-color: var(--stickynotebloo);
     transition: 0.5s;
 }
@@ -176,12 +193,13 @@ section{
 .grid-container{
   display: grid;
   row-gap: 2vw;
-  /* column-gap: 1vw; */
+  column-gap: 1vw;
   grid-template-columns: repeat(3, 1fr);
   width: 75vw;
-  transform: translate(18vw);
   overflow: visible;
   transition: 0.5s;
+  position: relative;
+  left: 20vw;
 }
 
 
@@ -240,7 +258,7 @@ section{
   background-color: var(--light);
   display: grid;
   box-shadow: 0 0 10px var(--dropshadow);
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 /* TYPOGRAPHY
@@ -302,10 +320,10 @@ a:hover {
   bottom: 0;
   right: 0;
   min-width: 200%;
-  height: 200vh;
+  height: 100vh;
   width: auto;
   object-fit: fill;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 #videobg .reel {
@@ -385,6 +403,7 @@ a:hover {
 
 .darkmode .rotateBtn{
   color: var(--border);
+  display: none;
 }
 
 .darkmode mark {
@@ -402,9 +421,25 @@ a:hover {
 }
 
 .darkmode .BioText{
-  transform: translate(12vw, -6vw);
+  transform: translate(22vw, -6vw);
   rotate: 0deg;
 }
+
+.darkmode .specialtypiece {
+  background-color: var(--dark);
+  background-image:none;
+  display: inline-block;
+  padding: 0.5vw 1.5vw 1vw 2vw;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0px 0px 5px var(--borderyellow);
+  rotate: 0deg;
+  transform: translate(-24vw,12vw);
+  border: solid;
+  border-color: var(--borderyellow);
+}
+
+
 
 .darkmode .paper{background: var(--dark);background-size: 100%;box-shadow: 0px 0px 20px var(--dropshadow);border-radius: 3px;}
 
@@ -427,14 +462,15 @@ a:hover {
   font-size: 1.3vw;
   letter-spacing: 1vw;
   border-radius: 2px;
-  box-shadow: 0px 0px 5px var(--dropshadow);
+  box-shadow: 0px 0px 5px var(--borderred);
   rotate: 0deg;
   position: relative;
   z-index: 1;
-  transform: translate(-10vw, -2vw);
+  transform: translate(70vw, -7.5vw);
   border: solid;
-  border-width: .15vw;
-  border-color: var(--border);
+  border-width: 0.2vw;
+  border-color: var(
+  --borderred);
 }
 
 .darkmode .portfoliopaper {
@@ -481,7 +517,7 @@ a:hover {
   column-gap: 1vw;
   grid-template-columns: repeat(3, 1fr);
   width: 75vw;
-  transform: translate(18vw);
+  transform: translate(0vw);
   overflow: visible;
 }
 
@@ -620,6 +656,7 @@ a:hover {
 
 .darkmode .project-video{
   border-color: var(--dark);
+  rotate: 0deg;
 }
 
 .darkmode .vert-menu > div:nth-child(odd){
@@ -653,7 +690,7 @@ a:hover {
     display: inline-block;
     position: relative;
     background-color: transparent;
-    transform: translate(5vw, 2vw) scale(1.4);
+    transform: translate(26vw, -3vw) scale(1.4);
     rotate: -3deg;
 }
 
@@ -661,17 +698,18 @@ a:hover {
 /*Project Active Styles ===========================================*/
 
 .vert-menu {
-  display: grid;
+  display: inline-grid;
   transition: 0.5s;
   justify-content: start;
   row-gap: 2vw;
   column-gap: 1vw;
-  width: 30vw;
-  transform: translate(18vw,0vw);
   padding: 1vw;
   overflow: scroll;
   margin: 0;
   align-items: start;
+  position: relative;
+  top: 15vw;
+  left: -10vw;
 }
 
 .vert-menu .grid-item{
@@ -685,10 +723,10 @@ a:hover {
   margin: 0.5vw;
 }
 
-  .vert-menu .polaroid-text{
-    font-size: 1vw;
-    margin: 0.1vw 0.5vw 0.5vw 0.5vw;
-  }
+.vert-menu .polaroid-text{
+  font-size: 1vw;
+  margin: 0.1vw 0.5vw 0.5vw 0.5vw;
+}
 
 .vert-menu > div:nth-child(odd) {
   rotate: 3deg;
@@ -718,7 +756,7 @@ a:hover {
 .project-active-notes {
   position: sticky;
   top: 5vw;
-  transform: translate(-2vw, 4vw);
+  transform: translate(-2vw, 11vw);
 }
 
 .project-active-notes > div:nth-child{
@@ -765,11 +803,21 @@ a:hover {
   cursor: pointer;
   box-shadow: 0px 0px 10px var(--dropshadow);
   background-color: var(--stickynoteyellow);
-  background-image:repeating-linear-gradient(transparent 0px, transparent 29px, var(--darkbryellow) 30px);
+  background-image: repeating-linear-gradient(transparent 0px, transparent 29px, var(--darkyellow) 30px);
 }
 
+.project-active-notes > div{
+  padding: 2vw;
+  margin-bottom: 4vw;
+  margin-top: 4vw;
+  min-width: 22vw;
+  max-width: 34vw;
+  transition: 0.5s;
+}
+
+
 .offscreen{
-  transform: translate(100vw, 0vw);
+  display: none;
 }
 
 /*Project Image Format =====================================================================*/
@@ -813,101 +861,89 @@ a:hover {
   --dropshadow);
   rotate: -3deg;
   transform: translate(0vw, 2vw);
+  transition: 0.5s;
   }
+
+/* PROJECT ACTIVE & INACTIVE STYLE ========================================================*/
+
+.project-active{
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  width: 59vw;
+  height: auto;
+  transform: translate(37vw, -59vw);
+  transition: 0.5s;
+}
+
+.project-inactive{
+  position: absolute;
+  width: 59vw;
+  height: 0;
+  overflow-y: hidden;
+  transform: translate(150vw, -59vw);}
+
+
+
 
 /*project-active-1 ============================================================*/
 
-.project-active-1{
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  width: 59vw;
-  height: auto;
-  transform: translate(37vw, -75vw);
-  transition: 0.5s;
-}
+  .P1_SN1_active {
+    padding: 2vw;
+    transform: translate(-22vw,0vw);
+    /* width: 22vw; */
+    transition: 0.5s;
+  }
 
-.project-inactive-1{
-  position: absolute;
-  width: 59vw;
-  height: 84vw;
-  transform: translate(150vw, -130vw);
-}
-
-.P1_SN1_active {
-  padding: 2vw;
-  transform: translate(-22vw,11vw);
-  width: 22vw;
-  transition: 0.5s;
-}
-
-.P1_SN1_inactive {
-  padding: 2vw;
-  transform: translate(0vw,11vw);
-  width: 22vw;
-  transition: 0.5s;
-}
+  .P1_SN1_inactive {
+    padding: 2vw;
+    transform: translate(0vw,0vw);
+    /* width: 22vw; */
+    transition: 0.5s;
+  }
 
 
-.P1_SN2_inactive {
-  padding: 2vw;
-  transform: translate(-2vw,12vw);
-  width: 25vw;
-  transition: 0.5s;
-}
+  .P1_SN2_inactive {
+    padding: 2vw;
+    transform: translate(-2vw,0vw);
+    width: 25vw;
+    transition: 0.5s;
+  }
 
 
-.P1_SN2_active {
-  padding: 2vw;
-  transform: translate(-24vw,12vw);
-  width: 25vw;
-  transition: 0.5s;
-}
+  .P1_SN2_active {
+    padding: 2vw;
+    transform: translate(-24vw,0vw);
+    width: 25vw;
+    transition: 0.5s;
+  }
 
-.p1s3inactive{
-  padding: 2vw;
-  transform: translate(0vw,17vw);
-  width: 23vw;
-  transition: 0.5s;
-}
+  .p1s3inactive{
+    padding: 2vw;
+    transform: translate(0vw,0vw);
+    width: 23vw;
+    transition: 0.5s;
+  }
 
-.p1s3active{
-  padding: 2vw;
-  transform: translate(-22vw,17vw);
-  width: 23vw;
-  transition: 0.5s;
-}
+  .p1s3active{
+    padding: 2vw;
+    transform: translate(-22vw,0vw);
+    width: 23vw;
+    transition: 0.5s;
+  }
 
 /*Project 2 Active =================================================*/
 
-.project-active-2 {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  width: 90vw;
-  height: auto;
-  transform: translate(37vw, -75vw);
-  transition: 0.5s;
-  padding: 2vw;
-}
-
-.project-inactive-2{
-  position: absolute;
-  width: 59vw;
-  height: 84vw;
-  transform: translate(150vw, -130vw);
-}
-
 .p2s1active {
   padding: 2vw;
-  transform: translate(-22vw,12vw);
+  transform: translate(-22vw,0vw);
   width: 24vw;
   transition: 0.5s;
 }
 
 .p2s1inactive {
   padding: 2vw;
-  transform: translate(0vw,12vw);
+  transform: translate(0vw,0vw);
   width: 24vw;
   transition: 0.5s;
 }
@@ -915,29 +951,29 @@ a:hover {
 
 .p2s2inactive {
   padding: 2vw;
-  transform: translate(-1vw,14vw);
-  width: 34vw;
+  transform: translate(0vw,0vw);
+  width: 30vw;
   transition: 0.5s;
 }
 
 
 .p2s2active {
   padding: 2vw;
-  transform: translate(-28vw,14vw);
-  width: 29vw;
+  transform: translate(-28vw,0vw);
+  width: 30vw;
   transition: 0.5s;
 }
 
 .p2s3inactive {
   padding: 2vw;
-  transform: translate(0vw,18vw);
+  transform: translate(0vw,0vw);
   width: 25vw;
   transition: 0.5s;
 }
 
 .p2s3active {
   padding: 2vw;
-  transform: translate(-24vw,19vw);
+  transform: translate(-24vw,0vw);
   width: 25vw;
   transition: 0.5s;
 }
@@ -945,14 +981,14 @@ a:hover {
 
 .p2s4inactive {
   padding: 2vw;
-  transform: translate(-2vw,20vw);
+  transform: translate(0vw,0vw);
   width: 22vw;
   transition: 0.5s;
 }
 
 .p2s4active {
   padding: 2vw;
-  transform: translate(-24vw,20vw);
+  transform: translate(-24vw,0vw);
   width: 22vw;
   transition: 0.5s;
 }
@@ -960,38 +996,19 @@ a:hover {
 
 .p2s5inactive {
   padding: 2vw;
-  transform: translate(-1vw,23vw);
-  width: 29vw;
+  transform: translate(-0vw,vw);
+  width: 32vw;
   transition: 0.5s;
 }
 
 .p2s5active {
   padding: 2vw;
-  transform: translate(-24vw,25vw);
-  width: 29vw;
+  transform: translate(-27vw,0vw);
+  width: 32vw;
   transition: 0.5s;
 }
 
 /*Project 3 Active ============================================================*/
-
-.project-inactive-3{
-  position: absolute;
-  width: 59vw;
-  height: 84vw;
-  transform: translate(150vw, -130vw);
-  /* transition: 0.5s; */
-}
-
-.project-active-3 {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  width: 59vw;
-  height: auto;
-  transform: translate(37vw, -75vw);
-  transition: 0.5s;
-  padding: 2vw;
-}
 
 .p3s1active {
   padding: 2vw;
@@ -1066,25 +1083,30 @@ a:hover {
 
 /*Project Active 4 =====================================================================*/
 
-.project-inactive-4 {
-  position: absolute;
-  width: 59vw;
-  height: 84vw;
-  transform: translate(150vw, -130vw);
-  /* transition: 0.5s; */
+.vlts1-inactive {
+ transform: translate(0vw,0vw);
 }
 
-.project-active-4 {
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  width: 59vw;
-  height: auto;
-  transform: translate(37vw, -75vw);
-  transition: 0.5s;
-  padding: 2vw;
+.vlts1-active {
+  transform: translate(-20vw,0vw);
+ }
+
+ .vlts2-inactive {
+ transform: translate(0vw,0vw);
 }
 
+.vlts2-active {
+  transform: translate(-20vw,0vw);
+ }
+
+
+.vlts3-inactive {
+ transform: translate(0vw,0vw);
+}
+
+.vlts3-active {
+  transform: translate(-20vw,0vw);
+ }
 /*Mobile size ===================================================================================================================*/
 
 @media (max-width: 600px) {
@@ -1099,19 +1121,6 @@ a:hover {
 
   body {
     font-size: 3vw;
-  }
-
-  .darkmode p {
-    font-size: 3vw;
-  }
-
-
-  .darkmode  h2 {
-    font-size: 5vw;
-  }
-
-  .darkmode h1{
-    font-size: 4vw;
   }
 
   h2 {
@@ -1133,19 +1142,14 @@ a:hover {
     z-index: 3;
   }
 
-  .darkmode .BusinessFront2{
-    max-width: 55vw;
-    transform: translate(12vw);
-    z-index: 3;
-  }
-
 
   .BioText{
         transform: translate(12vw, -8vw);
   }
 
-  .darkmode .BioText{
-    transform: translate(12vw, 1vw);
+
+  .specialtypiece{
+    transform: translate(3vw,-13vw);
   }
 
   #bio {
@@ -1153,10 +1157,6 @@ a:hover {
   }
 
   .pattern{
-    min-width: 80vw;
-  }
-
-  .darkmode .pattern{
     min-width: 80vw;
   }
 
@@ -1170,33 +1170,19 @@ a:hover {
   }
 
   .SocialMediaNotes{
-  transform: translate(50vw, -8vw);
+  transform: translate(8vw, -39vw);
   font-size: 4vw;
   letter-spacing: 1.5vw;
   }
 
-   .darkmode .SocialMediaNotes{
-  transform: translate(47vw, -1vw);
-  font-size: 4vw;
-  letter-spacing: 1.5vw;
-  }
 
   .grid-container{
     grid-template-columns: 1fr;
     row-gap: 35vw;
   }
 
-  .darkmode .grid-container{
-     grid-template-columns: 1fr;
-    row-gap: 35vw;
-  }
 
   .grid-item{
-  width: 57vw;
-  height: 49vw;
-  }
-
-  .darkmode .grid-item{
   width: 57vw;
   height: 49vw;
   }
@@ -1205,17 +1191,13 @@ a:hover {
     font-size: 5vw;
   }
 
-   .darkmode .polaroid-text{
-    font-size: 5vw;
-  }
-
   .vert-menu .polaroid-text{
     font-size: 2vw;
   }
 
   .vert-menu{
-    transform: translate(5vw,4vw);
-    /* width: 59vw; */
+    top: 26vw;
+    left: -48vw;
   }
   
   .vert-menu .grid-item{
@@ -1227,10 +1209,6 @@ a:hover {
     width: 55vw;
     height: auto;
   }  
-    .darkmode .polaroid{
-    width: 55vw;
-    height: auto;
-  } 
 
   .vert-menu .polaroid{
     width: 16vw;
@@ -1242,21 +1220,10 @@ a:hover {
     transform: translate(0vw, 0vw);
   }
 
-  .project-active-1{
-    transform: translate(26vw,-119vw);
+  .project-active{
+    transform: translate(26vw,-89vw);
   }
 
-  .project-active-2{
-    transform: translate(26vw,-119vw);
-  }
-
-  .project-active-3{
-    transform: translate(26vw,-119vw);
-  }
-
-  .project-active-4{
-    transform: translate(26vw,-119vw);
-  }
 
   .project-active-images{
     width: 67vw;
@@ -1266,133 +1233,231 @@ a:hover {
     max-width: 62vw;
   }
 
-  .P1_SN1_active {
-    transform: translate(-45vw, 18vw);
+  .project-active-notes > div{
+    padding: 2vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    min-width: 49vw;
   }
-
-  .P1_SN1_inactive {
-    transform: translate(0vw, 18vw);
-  }
-
-  .P1_SN2_active {
-    transform: translate(-45vw, 22vw);
-  }
-
-  .P1_SN2_inactive {
-    transform: translate(-2vw, 22vw);
-  }
-
-  .p1s3active{
-    transform: translate(-45vw,27vw);
-  }
-
-  .p1s3inactive{
-    transform: translate(0vw,27vw);
-  }
-
-  .project-active-notes > div:nth-child(odd){
-    width: 49vw;
-  }
-
-  .project-active-notes > div:nth-child(even){
-    width: 49vw;
-  }
-
-  .p2s1active{
-  transform: translate(-45vw, 18vw);
-
-  }
-
-  .p2s1inactive{
-    transform: translate(0vw, 18vw);
-
-  }
-
-    .p2s2active{
-  transform: translate(-45vw, 18vw);
-
-  }
-
-  .p2s2inactive{
-    transform: translate(0vw, 18vw);
-
-  }
-
-  .p2s3active{
-  transform: translate(-45vw, 27vw);
-  }
-
-  .p2s3inactive{
-    transform: translate(0vw, 27vw);
-  }
-
-  .p2s4active{
-  transform: translate(-45vw, 28vw);
-  }
-
-  .p2s4inactive{
-    transform: translate(0vw, 30vw);
-  }
-
-    .p2s5active{
-  transform: translate(-45vw, 36vw);
-  }
-
-  .p2s5inactive{
-    transform: translate(0vw, 36vw);
-  }
-
 
   .project-active-notes{
     transform: translate(-2vw, 24vw);
   }
 
+/*  Mobile BusinessCard Notes ===============*/
 
-    .p3s1active{
-  transform: translate(-45vw, 18vw);
+  .P1_SN1_active {
+    transform: translate(-45vw, 0vw);
+  }
+
+  .P1_SN1_inactive {
+    transform: translate(0vw, 0vw);
+  }
+
+  .P1_SN2_active {
+    transform: translate(-45vw, 0vw);
+  }
+
+  .P1_SN2_inactive {
+    transform: translate(-2vw, 0vw);
+  }
+
+  .p1s3active{
+    transform: translate(-45vw,0vw);
+  }
+
+  .p1s3inactive{
+    transform: translate(0vw,0vw);
+  }
+
+
+/*  Mobile NNP NOTES ==================*/
+  .p2s1active{
+   transform: translate(-45vw, 0vw);
+  }
+
+  .p2s1inactive{
+    transform: translate(0vw, 0vw);
+
+  }
+
+  .p2s2active{
+   transform: translate(-45vw, 00vw);
+  }
+
+  .p2s2inactive{
+   transform: translate(0vw, 0vw);
+
+  }
+
+  .p2s3active{
+    transform: translate(-45vw, 0vw);
+  }
+
+  .p2s3inactive{
+    transform: translate(0vw, 0vw);
+  }
+
+  .p2s4active{
+  transform: translate(-45vw, 0vw);
+  }
+
+  .p2s4inactive{
+    transform: translate(0vw, 0vw);
+  }
+
+    .p2s5active{
+  transform: translate(-45vw, 0vw);
+  }
+
+  .p2s5inactive{
+    transform: translate(0vw, 0vw);
+  }
+
+/*  Mobile Vindicated Notes ============*/
+  .p3s1active{
+  transform: translate(-45vw, 0vw);
 
   }
 
   .p3s1inactive{
-    transform: translate(0vw, 18vw);
+    transform: translate(0vw, 010vw);
 
   }
 
-    .p3s2active{
-  transform: translate(-45vw, 18vw);
+  .p3s2active{
+  transform: translate(-45vw, 0vw);
 
   }
 
   .p3s2inactive{
-    transform: translate(0vw, 18vw);
+    transform: translate(0vw, 0vw);
 
   }
 
   .p3s3active{
-  transform: translate(-45vw, 27vw);
+  transform: translate(-45vw, 0vw);
   }
 
   .p3s3inactive{
-    transform: translate(0vw, 27vw);
+    transform: translate(0vw, 0vw);
   }
 
   .p3s4active{
-  transform: translate(-45vw, 28vw);
+  transform: translate(-45vw, 0vw);
   }
 
   .p3s4inactive{
-    transform: translate(0vw, 30vw);
+    transform: translate(0vw, 0vw);
   }
 
     .p3s5active{
-  transform: translate(-45vw, 36vw);
+  transform: translate(-45vw, 0vw);
   }
 
   .p3s5inactive{
-    transform: translate(0vw, 36vw);
+    transform: translate(0vw, 0vw);
+  }
+
+
+/*  Mobile Valetine notes==================*/
+  .vlts1-active {
+  transform: translate(-44vw,0vw);
+ }
+  .vlts2-active {
+  transform: translate(-44vw,0vw);
+  }
+  .vlts3-active {
+  transform: translate(-44vw,0vw);
   }
 
   .project-video{
     rotate: 0deg;
   }
+
+  /* Mobile DarkMode ==========================================================*/
+
+  .darkmode body {
+    font-size: 3vw;
+  }
+
+  .darkmode p {
+    font-size: 3vw;
+  }
+
+
+  .darkmode  h2 {
+    font-size: 5vw;
+  }
+
+  .darkmode h1{
+    font-size: 4vw;
+  }
+  
+  .darkmode .polaroid{
+    width: 55vw;
+    height: auto;
+  } 
+
+  .darkmode .grid-item{
+    width: 57vw;
+    height: 49vw;
+  }
+  
+  .darkmode .polaroid-text{
+   font-size: 5vw;
+  }
+  
+  .darkmode .grid-container{
+    grid-template-columns: 1fr;
+   row-gap: 35vw;
+  }
+
+  .darkmode .specialtypiece{
+  transform: translate(4vw, -1vw);
+  }
+
+
+  .darkmode .SocialMediaNotes{
+    transform: translate(6vw, -24vw);
+    font-size: 4vw;
+    letter-spacing: 1.5vw;
+  }
+
+  .darkmode .pattern{
+    min-width: 80vw;
+  }
+
+  .darkmode .BioText{
+    transform: translate(12vw, 1vw);
+  }
+
+  .darkmode .BusinessFront2{
+    max-width: 55vw;
+    transform: translate(12vw);
+    z-index: 3;
+  }
+
+  /* DarkMode VertMenu Styles ============================================*/
+  .darkmode .vert-menu{
+  top: 26vw;
+  left: -47vw;
+  }
+
+  .darkmode .vert-menu .polaroid {
+    width: 16vw;
+    height: 16vw;
+  }
+  
+  .darkmode .vert-menu .grid-item{
+    width: 17vw;
+    height: auto;
+  }
+
+  .darkmode .vert-menu .polaroid-text{
+    font-size: 2vw;
+  }
 }
+
+
+

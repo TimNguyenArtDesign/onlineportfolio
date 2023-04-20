@@ -91,16 +91,12 @@ function clickToChange(triggerClass, targetElement, targetClass, Class) {
 }                                                                                                                                                                                                                                                                                                      
 
 // Project 1 show
-// clickToChange('.project-1', '#portfolio-menu', '.vert-menu', 'grid-container')
 clickToChange('.P1_SN1_inactive', '#p1s1','.P1_SN1_active','P1_SN1_inactive')
 clickToChange('.P1_SN2_inactive', '#p1s2','.P1_SN2_active','P1_SN2_inactive')
 clickToChange('.p1s3inactive', '#p1s3','.p1s3active','p1s3inactive')
-// clickToChange('.project-1', '#project1', '.project-active-1', 'project-inactive-1')
 
 
 // Project 2 show
-// clickToChange('.project-2', '#portfolio-menu', '.vert-menu', 'grid-container')
-// clickToChange('.project-2', '#project2', '.project-active-2', 'project-inactive-2')
 clickToChange('.p2s1inactive', '#p2s1','.p2s1active','p2s1inactive')
 clickToChange('.p2s2inactive', '#p2s2','.p2s2active','p2s2inactive')
 clickToChange('.p2s3inactive', '#p2s3','.p2s3active','p2s3inactive')
@@ -109,8 +105,6 @@ clickToChange('.p2s5inactive', '#p2s5','.p2s5active','p2s5inactive')
 
 
 // Project 3 show
-// clickToChange('.project-3', '#portfolio-menu', '.vert-menu', 'grid-container')
-// clickToChange('.project-3', '#project3', '.project-active-3', 'project-inactive-3')
 clickToChange('.p3s1inactive', '#p3s1','.p3s1active','p3s1inactive')
 clickToChange('.p3s2inactive', '#p3s2','.p3s2active','p3s2inactive')
 clickToChange('.p3s3inactive', '#p3s3','.p3s3active','p3s3inactive')
@@ -119,8 +113,9 @@ clickToChange('.p3s5inactive', '#p3s5','.p3s5active','p3s5inactive')
 
 
 // Project 4 show
-// clickToChange('.project-4', '#portfolio-menu', '.vert-menu', 'grid-container')
-// clickToChange('.project-4', '#project4', '.project-active-4', 'project-inactive-4')
+clickToChange('.vlts1-inactive', '#vlts1','.vlts1-active','vlts1-inactive')
+clickToChange('.vlts2-inactive', '#vlts2','.vlts2-active','vlts2-inactive')
+clickToChange('.vlts3-inactive', '#vlts3','.vlts3-active','vlts3-inactive')
 
 
 
